@@ -1,0 +1,12 @@
+#parent-div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.btn,
+.btn-primary {
+    background-color: black;
+    color: white;
+}
