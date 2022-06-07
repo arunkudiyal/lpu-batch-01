@@ -40,7 +40,7 @@
 
 // 6. Symbol --> Research Work
 
-// ECMA ---> Managing Syntax for PLs --> JavaScript, TypeScript, PyScript, etc.
+// ECMAScript ---> Managing Syntax for PLs --> JavaScript, TypeScript, PyScript, etc.
 // ECMA2015 ---> ES6 --> major changes in JS Syntax
 
 // CONDITIONAL STATEMENTS + OPERATORS
@@ -85,16 +85,112 @@
 // 1. Array --> Collection of similar Data Types
 
 // I.) Array Constructor
-const my_array = new Array(5) // length of the array
-my_array[0] = 100
-console.log(my_array)
+// const my_array = new Array(5) // length of the array
+// my_array[0] = 100
+// console.log(my_array)
 
-const my_second_array = new Array(1, 10, 6, 5, 11, 20, 17, 18)
-console.log(my_second_array)
-console.log(my_second_array[3])
-console.log(my_second_array[7])
-console.log(my_second_array[0])
+// const my_second_array = new Array(1, 10, 6, 5, 11, 20, 17, 18)
+// console.log(my_second_array)
+// console.log(my_second_array[3])
+// console.log(my_second_array[7])
+// console.log(my_second_array[0])
 
-// II.) Using [ ] Symbol
-const numbers = [10, 20, 30, 40, 50, 60]
-console.log(numbers)
+// // II.) Using [ ] Symbol
+// const numbers = [10, 20, 30, 40, 50, 60]
+// console.log(numbers)
+
+// // In JS everything is Objects
+// const anArray = [100, 'String', true, null, undefined]
+// console.log(anArray)
+
+// // REMINDER --> Arrays are reference types
+// const arr1 = [23, 27, 12, 10, 7, 17, 63]
+// const arr2 = arr1
+
+// arr2.push(100)
+// console.log(arr1)
+
+// const arr3 = [100, 200, 300, 400, 500]
+// // Spread Operator
+// const arr4 = [...arr3]
+
+// arr4.push(100)
+// console.log(arr3)
+// console.log(arr4)
+
+// Array Methods -
+// const fruits = ['Apple', 'Mango', 'Orange', 'Peach', 'Banana']
+// fruits[0] = 'New Apple'
+
+// // 1. Add an element - push
+// fruits.push('Watermelon')
+// fruits.push('Grapes')
+
+// // 2. Remove the elemnt - Last
+// fruits.pop()
+
+// // 3. Remove a data at a given position - splice(index, 1)
+// fruits.splice(2, 1, 'Guava', 'Pears', 'Strawberry')
+
+// console.log(fruits)
+
+// IMPLICIT TYPECASTING
+// console.log(2 + '2')
+// console.log(2 - '2')
+// console.log(2 - '-3')
+// console.log(2 - 'Hello')
+// console.log(2 * 'Hello')
+// console.log(2 / 'Hello')
+
+// console.log(true + false)
+// console.log('Hello' - 'World')
+
+
+// 2. Objects --> Dictonaries --> key: value
+
+// I.) Object Constructor
+// let employee = new Object()
+// employee.emp_id = 'LPU00765'
+// employee.emp_name = 'Sample Employee'
+// employee.emp_Designation = 'SDE - III'
+
+// II.) Using '{}' Symbol
+// const employee = {
+//     emp_Designation: "SDE - III",
+//     emp_id: "LPU00765",
+//     emp_name: "Sample Employee"
+// }
+
+// console.log(employee.emp_id)
+// console.log(employee)
+
+// const person = {
+//     firstName: 'Harry',
+//     lastName: 'Potter',
+//     age: 27,
+//     phone: '+91-1234567890',
+//     bGroud: 'A+',
+//     isCool: false,
+//     email: 'harry_potter@hogwards.com',
+//     hobbies: ['Doing Magic', 'Getting in Trouble', 'Playing Sports including Flying'],
+//     address: {
+//         street_no: 134,
+//         lane: 'West Lane',
+//         city: 'London',
+//         country: 'United Kingdoms'
+//     }
+// }
+
+// // Access the values
+// // i.) My name is Harry Potter
+// // console.log(person.firstName + " " + person.lastName)
+// // console.log(`${person.firstName} ${person.lastName}`)
+// console.log(`My name is ${person.firstName} ${person.lastName}`)
+
+// // I am Harry Potter & I live in 134, London
+// console.log(`I am ${person.firstName} ${person.lastName} & I live in ${person.address.street_no}, ${person.address.city}`)
+
+// console.log(person)
+
+
+// 2. Arrays of Objects
