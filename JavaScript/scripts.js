@@ -105,7 +105,7 @@
 
 // // REMINDER --> Arrays are reference types
 // const arr1 = [23, 27, 12, 10, 7, 17, 63]
-// const arr2 = arr1
+// const arr2 = arr1                            // Containing the value of the mem. address
 
 // arr2.push(100)
 // console.log(arr1)
@@ -135,18 +135,18 @@
 // console.log(fruits)
 
 // IMPLICIT TYPECASTING
-// console.log(2 + '2')
-// console.log(2 - '2')
-// console.log(2 - '-3')
-// console.log(2 - 'Hello')
-// console.log(2 * 'Hello')
-// console.log(2 / 'Hello')
+// console.log(2 + '2')     // 22
+// console.log(2 - '2')     // 0
+// console.log(2 - '-3')    // -5
+// console.log(2 - 'Hello') // NaN (Not a Number)
+// console.log(2 * 'Hello') // "
+// console.log(2 / 'Hello') // "
 
-// console.log(true + false)
+// console.log(true + false)    // 1
 // console.log('Hello' - 'World')
 
 
-// 2. Objects --> Dictonaries --> key: value
+// 2. Objects --> Dictonaries --> key: value --> '{}'
 
 // I.) Object Constructor
 // let employee = new Object()
@@ -192,5 +192,106 @@
 
 // console.log(person)
 
+// OBJECT ARE ALSO REFERENCE TYPES
+// const my_obj_one = {
+//     name: 'john Doe',
+//     age: 25,
+//     isEmp: true
+// }
 
-// 2. Arrays of Objects
+// const my_obj_two = my_obj_one
+// console.log(my_obj_two)
+
+// // Make any changes to the second obj <--> The first Object
+// my_obj_two.name = 'JOHN DOE'
+// my_obj_two.email = 'john_doe@something.com'
+// console.log(my_obj_one)
+
+// 2D Arrays / 2D Arrays
+// const two_D_array = [
+//     ['c00', 'c01', 'c02'],
+//     ['c10', 'c11', 'c12'],
+//     ['c20', 'c21', 'c22']
+// ]
+// console.log(two_D_array)
+
+// // Access
+// // c21 :-
+// console.log(two_D_array[2][1])
+
+
+// 3. Arrays of Objects
+// [ {}, {}, {}, {} ]
+
+const students = [{
+        "student_name": 'Student One',
+        student_age: 20,
+        student_year: '2019-2023',
+        student_bGroup: 'AB-',
+        student_skills: ['C', 'JavaSCript'],
+        student_address: {
+            street: 'Street - 1',
+            city: 'Chandigarh',
+            state: 'Chandigarh'
+        }
+    },
+    {
+        student_name: 'Student Two',
+        student_age: 21,
+        student_year: '2019-2023',
+        student_bGroup: 'A+',
+        student_skills: ['C', 'Python'],
+        student_address: {
+            street: 'Street - 2',
+            city: 'Chandigarh',
+            state: 'Chandigarh'
+        }
+    },
+    {
+        student_name: 'Student Three',
+        student_age: 21,
+        student_year: '2019-2023',
+        student_bGroup: 'B-',
+        student_skills: ['C', 'JavaSCript'],
+        student_address: {
+            street: 'Street - 3',
+            city: 'Chandigarh',
+            state: 'Chandigarh'
+        }
+    },
+    {
+        student_name: 'Student Four',
+        student_age: 22,
+        student_year: '2019-2023',
+        student_bGroup: 'O-',
+        student_skills: ['C', 'Python'],
+        student_address: {
+            street: 'Street - 4',
+            city: 'Chandigarh',
+            state: 'Chandigarh'
+        }
+    }
+]
+
+console.log(students)
+    // Accessing
+    // Q.1 - Display 'AB-'
+console.log(students[0].student_bGroup)
+
+// JavaScript from first object
+console.log(students[0].student_skills[1]);
+
+// Street - 4
+console.log(students[3].student_address.street)
+
+// Student One does not know Python
+console.log(`${students[0].student_name} does not know ${students[3].student_skills[1]}`)
+
+// convert AoO into JSON
+const stringifiedData = JSON.stringify(students)
+console.log(stringifiedData)
+
+const response = JSON.parse(stringifiedData)
+console.log(response)
+
+// LOOPS & Higher Order Array Methods - forEach, map, reduce, sort, filter...
