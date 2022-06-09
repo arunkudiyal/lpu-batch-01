@@ -223,75 +223,150 @@
 // 3. Arrays of Objects
 // [ {}, {}, {}, {} ]
 
-const students = [{
-        "student_name": 'Student One',
-        student_age: 20,
-        student_year: '2019-2023',
-        student_bGroup: 'AB-',
-        student_skills: ['C', 'JavaSCript'],
-        student_address: {
-            street: 'Street - 1',
-            city: 'Chandigarh',
-            state: 'Chandigarh'
-        }
-    },
-    {
-        student_name: 'Student Two',
-        student_age: 21,
-        student_year: '2019-2023',
-        student_bGroup: 'A+',
-        student_skills: ['C', 'Python'],
-        student_address: {
-            street: 'Street - 2',
-            city: 'Chandigarh',
-            state: 'Chandigarh'
-        }
-    },
-    {
-        student_name: 'Student Three',
-        student_age: 21,
-        student_year: '2019-2023',
-        student_bGroup: 'B-',
-        student_skills: ['C', 'JavaSCript'],
-        student_address: {
-            street: 'Street - 3',
-            city: 'Chandigarh',
-            state: 'Chandigarh'
-        }
-    },
-    {
-        student_name: 'Student Four',
-        student_age: 22,
-        student_year: '2019-2023',
-        student_bGroup: 'O-',
-        student_skills: ['C', 'Python'],
-        student_address: {
-            street: 'Street - 4',
-            city: 'Chandigarh',
-            state: 'Chandigarh'
-        }
-    }
-]
+// const students = [{
+//         student_name: 'Student One',
+//         student_age: 20,
+//         student_year: '2019-2023',
+//         student_bGroup: 'AB-',
+//         student_skills: ['C', 'JavaSCript'],
+//         student_address: {
+//             street: 'Street - 1',
+//             city: 'Chandigarh',
+//             state: 'Chandigarh'
+//         }
+//     },
+//     {
+//         student_name: 'Student Two',
+//         student_age: 21,
+//         student_year: '2019-2023',
+//         student_bGroup: 'A+',
+//         student_skills: ['C', 'Python'],
+//         student_address: {
+//             street: 'Street - 2',
+//             city: 'Chandigarh',
+//             state: 'Chandigarh'
+//         }
+//     },
+//     {
+//         student_name: 'Student Three',
+//         student_age: 21,
+//         student_year: '2019-2023',
+//         student_bGroup: 'B-',
+//         student_skills: ['C', 'JavaSCript'],
+//         student_address: {
+//             street: 'Street - 3',
+//             city: 'Chandigarh',
+//             state: 'Chandigarh'
+//         }
+//     },
+//     {
+//         student_name: 'Student Four',
+//         student_age: 22,
+//         student_year: '2019-2023',
+//         student_bGroup: 'O-',
+//         student_skills: ['C', 'Python'],
+//         student_address: {
+//             street: 'Street - 4',
+//             city: 'Chandigarh',
+//             state: 'Chandigarh'
+//         }
+//     }
+// ]
 
-console.log(students)
-    // Accessing
-    // Q.1 - Display 'AB-'
-console.log(students[0].student_bGroup)
+// console.log(students)
+//     // Accessing
+//     // Q.1 - Display 'AB-'
+// console.log(students[0].student_bGroup)
 
-// JavaScript from first object
-console.log(students[0].student_skills[1]);
+// // JavaScript from first object
+// console.log(students[0].student_skills[1]);
 
-// Street - 4
-console.log(students[3].student_address.street)
+// // Street - 4
+// console.log(students[3].student_address.street)
 
-// Student One does not know Python
-console.log(`${students[0].student_name} does not know ${students[3].student_skills[1]}`)
+// // Student One does not know Python
+// console.log(`${students[0].student_name} does not know ${students[3].student_skills[1]}`)
 
-// convert AoO into JSON
-const stringifiedData = JSON.stringify(students)
-console.log(stringifiedData)
+// // convert AoO into JSON
+// const stringifiedData = JSON.stringify(students)
+// console.log(stringifiedData)
 
-const response = JSON.parse(stringifiedData)
-console.log(response)
+// const response = JSON.parse(stringifiedData)
+// console.log(response)
 
 // LOOPS & Higher Order Array Methods - forEach, map, reduce, sort, filter...
+
+// Why Loops --> An operation which is done multiple times, we can iterate each step using loops
+// 1. Generic Loops --> i) for Loop ii) while Loops
+// 2. Higher Order Array Methods --> 5-6 in total
+
+// Print a table of 7 --> 7 x 1 = 7 ...
+// for(initialization; condition; inc/dec)
+
+// console.log(students)
+// console.log(students[0].student_name)
+// console.log(students[1].student_name)
+// console.log(students[2].student_name)
+// console.log(students[3].student_name)
+
+// for (let someValue = 0; someValue < students.length; someValue = someValue + 1) {
+//     console.log(students[someValue].student_name)
+// }
+
+// Print the table of 7
+// 7 x 1 = 7
+// 7 x 2 = 14
+// ...
+// 7 x 10 = 70
+// for (let index = 1; index <= 10; index = index + 1) {
+//     console.log(`7 x ${index} = ${7 * index}`)
+// }
+
+// while
+// initialization
+// while(condition) {
+//      inc / dec
+//}
+
+// let value = 7
+// while (value <= 70) {
+//     // Operations  -> 7 <--> 1; 14 <---> 2
+//     console.log(`7 x ${value / 7} = ${value}`)
+//     value = value + 7
+// }
+
+
+// FUNCTIONS :-
+
+// function add(val1, val2) {
+//     if (typeof val1 == 'number' && typeof val2 == 'number') {
+//         return val1 + val2
+//     } else {
+//         return 'Addition is only permittable in Number types'
+//     }
+// }
+
+// const sum1 = add(100, 20)
+// console.log(sum1)
+
+// const sum2 = add(true, true)
+// console.log(sum2)
+
+// ES6 Arrow Functions (=>) | You can assign any function to a variable using '=>'
+// const add = (param1, param2) => {
+//     if (typeof param1 == 'number' && typeof param2 == 'number') {
+//         return param1 + param2
+//     } else {
+//         return 'Addition is only permittable in Number types'
+//     }
+// }
+
+const addTwo = (val1, val2) => {
+    typeof val1 == 'number' && typeof val2 == 'number' ? val1 + val2 : 'Addition is only permittable in Number types'
+}
+
+const sum1 = addTwo(10, 2)
+console.log(sum1)
+
+const sum2 = addTwo(true, true)
+console.log(sum2)
