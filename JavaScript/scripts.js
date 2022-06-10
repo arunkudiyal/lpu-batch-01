@@ -361,12 +361,72 @@
 //     }
 // }
 
-const addTwo = (val1, val2) => {
-    typeof val1 == 'number' && typeof val2 == 'number' ? val1 + val2 : 'Addition is only permittable in Number types'
-}
+// const addTwo = (val1, val2) => {
+//     typeof val1 == 'number' && typeof val2 == 'number' ? val1 + val2 : val1 - val2
+// }
 
-const sum1 = addTwo(10, 2)
-console.log(sum1)
+// consition ? expression (true) : expression (false)
+// const addTwo = (par1, par2) => {
+//     return typeof par1 == 'number' && typeof par2 == 'number' ? par1 + par2 : 'Addition is only permittable in Number types'
+// }
 
-const sum2 = addTwo(true, true)
-console.log(sum2)
+// const sum1 = addTwo(10, 2)
+// console.log(sum1)
+
+// const sum2 = addTwo(true, true)
+// console.log(sum2)
+
+// const addThree = (var1, var2) => typeof var1 == 'number' && typeof var2 == 'number' ? var1 + var2 : 'Addition is only permittable in Number types'
+
+// const res1 = addThree(100, 200)
+// const res2 = addThree('100', '200')
+// console.log(res1)
+// console.log(res2)
+
+// const square = number => number * number
+
+// const square1 = square(100)
+// console.log(square1)
+
+
+// HIGHER ORDER ARRAY METHODS
+
+const employees = [
+    { emp_id: 'EMP001', emp_name: 'Employee 1', start: 1993, end: 2011, designation: 'IT' },
+    { emp_id: 'EMP002', emp_name: 'Employee 2', start: 1967, end: 1990, designation: 'Sales' },
+    { emp_id: 'EMP003', emp_name: 'Employee 3', start: 1920, end: 1996, designation: 'DME' },
+    { emp_id: 'EMP004', emp_name: 'Employee 4', start: 1937, end: 2020, designation: 'Sales' },
+    { emp_id: 'EMP005', emp_name: 'Employee 5', start: 1980, end: 1985, designation: 'IT' },
+    { emp_id: 'EMP006', emp_name: 'Employee 6', start: 1997, end: 2015, designation: 'DME' },
+    { emp_id: 'EMP007', emp_name: 'Employee 7', start: 1991, end: 2021, designation: 'IT' },
+    { emp_id: 'EMP008', emp_name: 'Employee 8', start: 1970, end: 2010, designation: 'Sales' }
+]
+
+const ages = [10, 21, 37, 87, 19, 18, 17, 90, 67, 96, 22, 100, 69, 26, 2]
+
+// console.log(employees)
+// Q:- Print the name of each employee
+// for (let i = 0; i < employees.length; i += 1) {
+//     console.log(employees[i].emp_name)          // employees[0].emp_name
+// }
+
+// Basic Syntax --> arrName.methodName( (iteratingValue, index, array) )
+
+// 1. forEach()
+// Q:- Print the emp_id of each employee
+// employees.forEach( () => {} )
+// employees.forEach((employee, index, arr) => console.log(employee.emp_id))
+employees.forEach(employee => console.log(employee.start + 2))
+
+// 2. map()
+// Q:- An array containing joining year of each employee
+const startYears = employees.map(employee => employee.designation)
+console.log(startYears)
+
+// 3. filter()
+// Q:-  Employees who joined the org after 1950
+const fiftiesEmployees = employees.filter(employee => employee.start >= 1950 && employee.start <= 1970)
+console.log(fiftiesEmployees)
+
+const canDrink = ages.filter(age => age >= 18)
+console.log(canDrink)
