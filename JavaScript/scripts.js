@@ -403,6 +403,7 @@ const employees = [
 ]
 
 const ages = [10, 21, 37, 87, 19, 18, 17, 90, 67, 96, 22, 100, 69, 26, 2]
+const alphabets = ['e', 'f', 'm', 'g', 'i', 'p', 'k', 'a', 'c', 'b']
 
 // console.log(employees)
 // Q:- Print the name of each employee
@@ -416,17 +417,91 @@ const ages = [10, 21, 37, 87, 19, 18, 17, 90, 67, 96, 22, 100, 69, 26, 2]
 // Q:- Print the emp_id of each employee
 // employees.forEach( () => {} )
 // employees.forEach((employee, index, arr) => console.log(employee.emp_id))
-employees.forEach(employee => console.log(employee.start + 2))
+// employees.forEach(employee => console.log(employee.start + 2))
 
 // 2. map()
 // Q:- An array containing joining year of each employee
 const startYears = employees.map(employee => employee.designation)
-console.log(startYears)
+    // console.log(startYears)
 
 // 3. filter()
 // Q:-  Employees who joined the org after 1950
 const fiftiesEmployees = employees.filter(employee => employee.start >= 1950 && employee.start <= 1970)
-console.log(fiftiesEmployees)
+    // console.log(fiftiesEmployees)
 
 const canDrink = ages.filter(age => age >= 18)
-console.log(canDrink)
+    // console.log(canDrink)
+
+const sortedAges = ages.sort((a, b) => a - b)
+    // console.log(sortedAges)
+
+const sortedAgesTwo = ages.sort((a, b) => b - a)
+    // console.log(sortedAgesTwo)
+
+// const sortedAges = ages.sort((a, b) => {
+//     if (a < b) {
+//         return -1
+//     } else if (a == b) {
+//         return 0
+//     } else {
+//         return +1
+//     }
+// })
+
+// console.log(sortedAges)
+
+const sortedAplhabets = alphabets.sort((a, b) => {
+        if (a < b) {
+            return -1
+        } else if (a == b) {
+            return 0
+        } else {
+            return +1
+        }
+    })
+    // console.log(sortedAplhabets)
+
+// reduce()
+// reduce((total, iteratingValue))
+const sumData = ages.reduce((total, age) => { return total + age }, 0)
+    // console.log(sumData)
+
+const productData = ages.reduce((total, age) => { return total * age }, 1)
+    // console.log(productData)
+
+// Combination of higher Order Methods
+
+const employees_two = [
+    { emp_id: 'EMP001', emp_name: 'Employee 1', start: 1993, end: 2011, designation: 'IT' },
+    { emp_id: 'EMP002', emp_name: 'Employee 2', start: 1967, end: 1990, designation: 'Sales' },
+    { emp_id: 'EMP003', emp_name: 'Employee 3', start: 1920, end: 1996, designation: 'DME' },
+    { emp_id: 'EMP004', emp_name: 'Employee 4', start: 1937, end: 2020, designation: 'Sales' },
+    { emp_id: 'EMP005', emp_name: 'Employee 5', start: 1980, end: 1985, designation: 'IT' },
+    { emp_id: 'EMP006', emp_name: 'Employee 6', start: 1997, end: 2015, designation: 'DME' },
+    { emp_id: 'EMP007', emp_name: 'Employee 7', start: 1991, end: 2021, designation: 'IT' },
+    { emp_id: 'EMP008', emp_name: 'Employee 8', start: 1970, end: 2010, designation: 'Sales' }
+]
+
+// Q:- Sort the start year of each employee
+// const years = employees_two.map(employee => employee.start)
+// const sortedYears = years.sort((a, b) => a - b)
+// console.log(sortedYears)
+
+// const sortedStartYears = employees_two.map(employee => employee.start).sort((a, b) => a - b)
+// console.log(sortedStartYears)
+
+// // Q: - Get the NAMES of the employee(s) who are from Sales Dept.
+// // const filteredNames = employees_two.map(employee => employee.emp_name)
+// const filteredNames = employees_two.filter(employee => employee.designation == 'Sales').map(employee => employee.emp_name)
+// console.log(filteredNames)
+
+// Differnce b/w '==' & '==='
+// == -> Only the values are compared
+// === -> Values & type are checked
+const answer = 3 == '3' ? 'Yes' : 'No'
+console.log(answer)
+
+const answer_two = 1 === '1' ? 'Yes' : 'No'
+console.log(answer_two)
+
+// CLASSES & OBJECTS
