@@ -498,10 +498,46 @@ const employees_two = [
 // Differnce b/w '==' & '==='
 // == -> Only the values are compared
 // === -> Values & type are checked
-const answer = 3 == '3' ? 'Yes' : 'No'
-console.log(answer)
+// const answer = 3 == '3' ? 'Yes' : 'No'
+// console.log(answer)
 
-const answer_two = 1 === '1' ? 'Yes' : 'No'
-console.log(answer_two)
+// const answer_two = 1 === '1' ? 'Yes' : 'No'
+// console.log(answer_two)
 
 // CLASSES & OBJECTS
+
+// class Student {
+//     // Data which relates with a student
+//     constructor(rno, name, email, dob, mob_number) {
+//         // define your class varibale
+//         // classVariable = parameter
+//         this.rno = rno
+//         this.name = name
+//         this.email = email
+//         this.dob = dob
+//         this.mob_number = mob_number
+//     }
+
+//     getName = () => {
+//         return this.name
+//     }
+// }
+
+// // const nameOfObject = new Constructor(parameters)
+// const student_one = new Student(101, 'Student One', '12/05/1992', '1234567890')
+// console.log(student_one)
+
+// const nameOfFirstStudent = student_one.getName()
+// console.log(nameOfFirstStudent)
+
+// class Person extends Student {
+//     // constructor of the derived class (Person)
+//     constructor(personId) {
+//         // super keywords calls the constructor of the parent class (Student) to the derived class
+//         super(101, 'Student Two', '12/05/1992', '1234567890')
+//         this.personId = personId
+//     }
+// }
+
+// const person_one = new Person(1001)
+// console.log(person_one)
