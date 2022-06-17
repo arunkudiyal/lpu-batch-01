@@ -105,3 +105,69 @@
 
 
 // DOM TRAVERSALS
+
+// const list = document.querySelector('ul')
+
+// // Children Nodes of the list
+// for (let i = 0; i < list.children.length; i++) {
+//     if (i % 2 === 0) {
+//         list.children[i].style.backgroundColor = 'lightgray'
+//     }
+// }
+
+// console.log(list.firstChild)        // #text
+// console.log(list.firstElementChild)
+
+// console.log(list.lastChild)
+// console.log(list.lastElementChild.textContent)
+
+
+// SIBLINGS
+
+// console.log(document.querySelector('#heading-two').nextElementSibling)
+// console.log(document.querySelector('#heading-two').previousElementSibling)
+
+// // PARENT
+// console.log(document.querySelector('#heading-two').parentElement)
+
+// console.log(document.querySelector('#my-btn').parentElement.parentElement.parentElement)
+
+
+// CREATE HTML USING JS ->
+
+// const myDiv = document.createElement('div')
+// myDiv.textContent = 'Hey... This is my Div'
+
+// // Define Attributes for any element
+// // myDiv.setAttribute('nameOfTheAttribute', 'valueOfTheAttribute')
+// myDiv.setAttribute('id', 'my-div')
+// myDiv.setAttribute('class', 'my-div-class')
+// console.log(myDiv)
+
+// // Remove an attribute from an element
+// myDiv.removeAttribute('class')
+// console.log(myDiv)
+
+// // Put this in th DOM - innerHTML
+// // document.querySelector('#fill-div').innerHTML = myDiv
+// document.querySelector('#fill-div').appendChild(myDiv)
+
+
+// TODO APPLICATION DEMO
+// document.querySelector('#my-btn').addEventListener('click', () => {
+//     console.log(document.querySelector('#my-text').value)
+// })
+
+document.querySelector('#submit-btn').addEventListener('click', (e) => {
+    e.preventDefault()
+    const textData = document.querySelector('#my-text').value
+    // Create a new li
+    const li = document.createElement('li')
+    li.textContent = textData
+    // Give li the class
+    li.setAttribute('class', 'list-group-item')
+    // Make the li a child to ul
+    // document.querySelector('#unordered-list').appendChild(li)
+    document.querySelector('#unordered-list').lastElementChild.previousElementSibling.previousElementSibling.appendChild(li)
+    // console.log(li)
+})

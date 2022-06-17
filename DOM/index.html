@@ -24,13 +24,13 @@
         <div id="main" class="card card-body">
 
             <h2 class="title">Add Items</h2>
-            <form class="form-inline mb-3">
+            <form class="form-inline mb-3" >
                 <input id="my-text" type="text" class="form-control mr-2" placeholder="Enter item name...">
-                <input type="submit" class="btn btn-dark" value="Submit">
+                <input id="submit-btn" type="submit" class="btn btn-dark" value="Submit">
             </form>
 
-            <h2 class="title">Items</h2>
-            <ul class="list-group">
+            <h2 id="heading-two" class="title">Items</h2>
+            <ul id="unordered-list" class="list-group">
                 <li class="list-group-item">Item 1</li>
                 <li class="list-group-item">Item 2</li>
                 <li class="list-group-item">Item 3</li>
@@ -39,6 +39,8 @@
             </ul>
 
             <br>
+
+            <div id="fill-div"></div>
 
             <!-- <button onClick="console.log('Hello...')" class="btn btn-dark" id="button">Click Me</button> -->
             <button id='my-btn' class="btn btn-dark" id="button">Click Me</button>
