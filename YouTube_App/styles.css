@@ -1,0 +1,15 @@
+#my-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.container-item {
+    width: 23%;
+    height: auto;
+    margin: 10px;
+}
+
+.container-item img {
+    width: 100%;
+}
