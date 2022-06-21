@@ -13,32 +13,18 @@ xhr.onreadystatechange = () => {
         // Data Type --> Array of Objects
         const response = JSON.parse(xhr.responseText)
 
-        // response.forEach( res => {
-            // const myImageURL = res.avatar_url
-            // const myImage = document.createElement('img')
-            // myImage.setAttribute('src', myImageURL)
-
-        //     const parser = new DOMParser();
-        //     const myImageObject = parser.parseFromString(myImage, "text/html");
-
-        //     // output = output + something
-        //     output += myImageObject
-        // })
+        var output = ''
 
         for(let i=0; i < response.length; i++) {
             const myImageURL = response[i].avatar_url
-            const myImage = document.createElement('img')
-            myImage.setAttribute('src', myImageURL)
-
-            // const imageElement = <HT>(myImage)
-
-            // output += myImage
-            // console.log(myImage)
-
-            document.querySelector('#my-images').innerHTML += imageElement
+            output += `
+                <img style="margin: 2em;" src=${myImageURL} />
+                <p>${response[i].login}</p>
+            `
         }
 
-        // put the image as a child to the div
+        // Add this string as an HTML to the div
+        document.querySelector('#my-images').innerHTML = output
     }
 }
 
